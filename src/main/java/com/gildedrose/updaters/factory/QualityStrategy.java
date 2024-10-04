@@ -2,6 +2,6 @@ package com.gildedrose.updaters.factory;
 
 import com.gildedrose.Item;
 
-public interface QualityUpdater {
+public interface QualityStrategy {
   void updateQuality(Item item);
 }

@@ -1,26 +1,26 @@
 package com.gildedrose.updaters.factory;
 
 import com.gildedrose.Item;
-import com.gildedrose.updaters.AgedBrieItemQualityUpdater;
-import com.gildedrose.updaters.BackStageItemQualityUpdater;
-import com.gildedrose.updaters.ConjuredItemQualityUpdater;
-import com.gildedrose.updaters.NormalItemQualityUpdater;
-import com.gildedrose.updaters.SulfurasItemQualityUpdater;
+import com.gildedrose.updaters.AgedBrieItemQualityUpdaterStrategy;
+import com.gildedrose.updaters.BackStageItemQualityUpdaterStrategy;
+import com.gildedrose.updaters.ConjuredItemQualityUpdaterStrategy;
+import com.gildedrose.updaters.NormalItemQualityUpdaterStrategy;
+import com.gildedrose.updaters.SulfurasItemQualityUpdaterStrategy;
 
 public class QualityUpdaterFactory {
 
-  public static QualityUpdater getQualityUpdater(Item item) {
+  public static QualityStrategy getQualityUpdater(Item item) {
     switch (item.name) {
       case "Backstage passes to a TAFKAL80ETC concert":
-        return new BackStageItemQualityUpdater();
+        return new BackStageItemQualityUpdaterStrategy();
       case "Aged Brie":
-        return new AgedBrieItemQualityUpdater();
+        return new AgedBrieItemQualityUpdaterStrategy();
       case "Sulfuras, Hand of Ragnaros":
-        return new SulfurasItemQualityUpdater();
+        return new SulfurasItemQualityUpdaterStrategy();
       case "Conjured":
-        return new ConjuredItemQualityUpdater();
+        return new ConjuredItemQualityUpdaterStrategy();
       default:
-        return new NormalItemQualityUpdater();
+        return new NormalItemQualityUpdaterStrategy();
     }
   }
 }

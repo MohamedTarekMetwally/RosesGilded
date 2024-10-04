@@ -4,12 +4,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-import com.gildedrose.updaters.AgedBrieItemQualityUpdater;
-import com.gildedrose.updaters.BackStageItemQualityUpdater;
-import com.gildedrose.updaters.ConjuredItemQualityUpdater;
-import com.gildedrose.updaters.NormalItemQualityUpdater;
-import com.gildedrose.updaters.SulfurasItemQualityUpdater;
-import com.gildedrose.updaters.factory.QualityUpdater;
+import com.gildedrose.updaters.AgedBrieItemQualityUpdaterStrategy;
+import com.gildedrose.updaters.BackStageItemQualityUpdaterStrategy;
+import com.gildedrose.updaters.ConjuredItemQualityUpdaterStrategy;
+import com.gildedrose.updaters.NormalItemQualityUpdaterStrategy;
+import com.gildedrose.updaters.SulfurasItemQualityUpdaterStrategy;
+import com.gildedrose.updaters.factory.QualityStrategy;
 import com.gildedrose.updaters.factory.QualityUpdaterFactory;
 
 public class GildedRoseTest {
@@ -29,10 +29,10 @@ public class GildedRoseTest {
         gildedRose = new GildedRose(new Item[]{item});
 
         //WHEN
-        QualityUpdater qualityUpdater = QualityUpdaterFactory.getQualityUpdater(item);
+        QualityStrategy qualityUpdater = QualityUpdaterFactory.getQualityUpdater(item);
 
         //THEN
-        assertEquals(qualityUpdater.getClass(), BackStageItemQualityUpdater.class);
+        assertEquals(qualityUpdater.getClass(), BackStageItemQualityUpdaterStrategy.class);
     }
 
     @Test
@@ -42,10 +42,10 @@ public class GildedRoseTest {
         gildedRose = new GildedRose(new Item[]{item});
 
         //WHEN
-        QualityUpdater qualityUpdater = QualityUpdaterFactory.getQualityUpdater(item);
+        QualityStrategy qualityUpdater = QualityUpdaterFactory.getQualityUpdater(item);
 
         //THEN
-        assertEquals(qualityUpdater.getClass(), AgedBrieItemQualityUpdater.class);
+        assertEquals(qualityUpdater.getClass(), AgedBrieItemQualityUpdaterStrategy.class);
     }
 
     @Test
@@ -55,10 +55,10 @@ public class GildedRoseTest {
         gildedRose = new GildedRose(new Item[]{item});
 
         //WHEN
-        QualityUpdater qualityUpdater = QualityUpdaterFactory.getQualityUpdater(item);
+        QualityStrategy qualityUpdater = QualityUpdaterFactory.getQualityUpdater(item);
 
         //THEN
-        assertEquals(qualityUpdater.getClass(), SulfurasItemQualityUpdater.class);
+        assertEquals(qualityUpdater.getClass(), SulfurasItemQualityUpdaterStrategy.class);
     }
 
     @Test
@@ -68,10 +68,10 @@ public class GildedRoseTest {
         gildedRose = new GildedRose(new Item[]{item});
 
         //WHEN
-        QualityUpdater qualityUpdater = QualityUpdaterFactory.getQualityUpdater(item);
+        QualityStrategy qualityUpdater = QualityUpdaterFactory.getQualityUpdater(item);
 
         //THEN
-        assertEquals(qualityUpdater.getClass(), NormalItemQualityUpdater.class);
+        assertEquals(qualityUpdater.getClass(), NormalItemQualityUpdaterStrategy.class);
     }
 
     @Test
@@ -81,9 +81,9 @@ public class GildedRoseTest {
         gildedRose = new GildedRose(new Item[]{item});
 
         //WHEN
-        QualityUpdater qualityUpdater = QualityUpdaterFactory.getQualityUpdater(item);
+        QualityStrategy qualityUpdater = QualityUpdaterFactory.getQualityUpdater(item);
 
         //THEN
-        assertEquals(qualityUpdater.getClass(), ConjuredItemQualityUpdater.class);
+        assertEquals(qualityUpdater.getClass(), ConjuredItemQualityUpdaterStrategy.class);
     }
 }

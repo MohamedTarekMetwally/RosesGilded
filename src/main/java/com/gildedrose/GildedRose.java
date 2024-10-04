@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-import com.gildedrose.updaters.factory.QualityUpdater;
+import com.gildedrose.updaters.factory.QualityStrategy;
 import com.gildedrose.updaters.factory.QualityUpdaterFactory;
 
 public class GildedRose {
@@ -18,7 +18,7 @@ public class GildedRose {
   }
 
   private void updateSingleItemQuality(Item item) {
-    QualityUpdater updater = QualityUpdaterFactory.getQualityUpdater(item);
+    QualityStrategy updater = QualityUpdaterFactory.getQualityUpdater(item);
     updater.updateQuality(item);
   }
 }
