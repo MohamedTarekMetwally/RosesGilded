@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-import com.gildedrose.updaters.factory.QualityStrategy;
+import com.gildedrose.updaters.QualityStrategy;
 import com.gildedrose.updaters.factory.QualityUpdaterFactory;
 
 public class GildedRose {

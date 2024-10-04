@@ -1,4 +1,4 @@
-package com.gildedrose.updaters.factory;
+package com.gildedrose.updaters;
 
 import com.gildedrose.Item;
 

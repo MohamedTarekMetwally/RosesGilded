@@ -5,6 +5,7 @@ import com.gildedrose.updaters.AgedBrieItemQualityUpdaterStrategy;
 import com.gildedrose.updaters.BackStageItemQualityUpdaterStrategy;
 import com.gildedrose.updaters.ConjuredItemQualityUpdaterStrategy;
 import com.gildedrose.updaters.NormalItemQualityUpdaterStrategy;
+import com.gildedrose.updaters.QualityStrategy;
 import com.gildedrose.updaters.SulfurasItemQualityUpdaterStrategy;
 
 public class QualityUpdaterFactory {

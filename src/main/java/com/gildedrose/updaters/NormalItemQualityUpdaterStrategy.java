@@ -1,7 +1,6 @@
 package com.gildedrose.updaters;
 
 import com.gildedrose.Item;
-import com.gildedrose.updaters.factory.QualityStrategy;
 
 public class NormalItemQualityUpdaterStrategy implements QualityStrategy {
 
