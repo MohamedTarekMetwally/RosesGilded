@@ -5,7 +5,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 import com.gildedrose.GildedRose;
-import com.gildedrose.GildedRose22;
 import com.gildedrose.GildedRoseTest;
 import com.gildedrose.Item;
 
@@ -16,6 +15,7 @@ public class AgedBrieTypeTest extends GildedRoseTest {
     //GIVE
     Item item = new Item("Aged Brie", 10, 20);
     gildedRose = new GildedRose(new Item[]{item});
+
     //WHEN
     gildedRose.updateQuality();
 
@@ -29,6 +29,7 @@ public class AgedBrieTypeTest extends GildedRoseTest {
     //GIVE
     Item item = new Item("Aged Brie", 10, -20);
     gildedRose = new GildedRose(new Item[]{item});
+
     //WHEN
     gildedRose.updateQuality();
 
@@ -54,7 +55,7 @@ public class AgedBrieTypeTest extends GildedRoseTest {
   @Test
   public void testAgedBrieSellInUpdateWhenNegative() {
     //GIVE
-    Item item = new Item("Aged Brie", -5, 20);
+    Item item = new Item(AGED_BRIE, -5, 20);
     gildedRose = new GildedRose(new Item[]{item});
 
     //WHEN

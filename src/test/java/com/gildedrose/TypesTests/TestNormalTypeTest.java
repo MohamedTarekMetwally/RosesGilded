@@ -13,7 +13,7 @@ public class TestNormalTypeTest extends GildedRoseTest {
   @Test
   public void testNormalQualityUpdater() {
     //GIVEN
-    Item item = new Item("Other types", 5, 20);
+    Item item = new Item(OTHERS, 5, 20);
     gildedRose = new GildedRose(new Item[]{item});
 
     //WHEN
@@ -27,7 +27,7 @@ public class TestNormalTypeTest extends GildedRoseTest {
   @Test
   public void testNormalQualityNegativeSellIn() {
     //GIVEN
-    Item item = new Item("Other types", -5, 20);
+    Item item = new Item(OTHERS, -5, 20);
     gildedRose = new GildedRose(new Item[]{item});
 
     //WHEN
@@ -41,7 +41,7 @@ public class TestNormalTypeTest extends GildedRoseTest {
   @Test
   public void testNormalQualityNegativeQualityValue() {
     //GIVEN
-    Item item = new Item("Other types", -5, -20);
+    Item item = new Item(OTHERS, -5, -20);
     gildedRose = new GildedRose(new Item[]{item});
 
     //WHEN

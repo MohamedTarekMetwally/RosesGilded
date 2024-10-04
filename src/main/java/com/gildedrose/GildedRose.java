@@ -21,6 +21,4 @@ public class GildedRose {
     QualityUpdater updater = QualityUpdaterFactory.getQualityUpdater(item);
     updater.updateQuality(item);
   }
-
-
 }

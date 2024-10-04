@@ -5,16 +5,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 import com.gildedrose.GildedRose;
-import com.gildedrose.GildedRose22;
 import com.gildedrose.GildedRoseTest;
 import com.gildedrose.Item;
 
 public class ConjuredTypeTest extends GildedRoseTest {
+
   @Test
   public void testConjuredItemQualityUpdated() {
     //GIVE
     Item item = new Item("Conjured", -5, 20);
     gildedRose = new GildedRose(new Item[]{item});
+
     //WHEN
     gildedRose.updateQuality();
 
@@ -28,6 +29,7 @@ public class ConjuredTypeTest extends GildedRoseTest {
     //GIVE
     Item item = new Item("Conjured", -5, -5);
     gildedRose = new GildedRose(new Item[]{item});
+
     //WHEN
     gildedRose.updateQuality();
 
@@ -42,6 +44,7 @@ public class ConjuredTypeTest extends GildedRoseTest {
     //GIVE
     Item item = new Item("Conjured", 5, 5);
     gildedRose = new GildedRose(new Item[]{item});
+
     //WHEN
     gildedRose.updateQuality();
 

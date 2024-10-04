@@ -14,7 +14,7 @@ public class TestSulfurasTypeTest extends GildedRoseTest {
   @Test
   public void testSulfurasQualityUpdater() {
     //GIVEN
-    Item item = new Item("Sulfuras, Hand of Ragnaros", 5, 20);
+    Item item = new Item(SULFURAS_HAND_OF_RAGNAROS, 5, 20);
     gildedRose = new GildedRose(new Item[]{item});
 
     //WHEN

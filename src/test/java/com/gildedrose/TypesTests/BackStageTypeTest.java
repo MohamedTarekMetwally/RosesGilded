@@ -13,7 +13,7 @@ public class BackStageTypeTest extends GildedRoseTest {
   @Test
   public void testBackStageQualityUpdater() {
     //GIVEN
-    Item item = new Item("Backstage passes to a TAFKAL80ETC concert", 5, 20);
+    Item item = new Item(BACK_STAGE, 5, 20);
     gildedRose = new GildedRose(new Item[]{item});
 
     //WHEN
@@ -27,7 +27,7 @@ public class BackStageTypeTest extends GildedRoseTest {
   @Test
   public void testBackStageNegativeSellIn() {
     //GIVEN
-    Item item = new Item("Backstage passes to a TAFKAL80ETC concert", -5, 20);
+    Item item = new Item(BACK_STAGE, -5, 20);
     gildedRose = new GildedRose(new Item[]{item});
 
     //WHEN
@@ -41,7 +41,7 @@ public class BackStageTypeTest extends GildedRoseTest {
   @Test
   public void testBackStageBigQualityValue() {
     //GIVEN
-    Item item = new Item("Backstage passes to a TAFKAL80ETC concert", 5, 100);
+    Item item = new Item(BACK_STAGE, 5, 100);
     gildedRose = new GildedRose(new Item[]{item});
 
     //WHEN
