@@ -5,7 +5,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 import com.gildedrose.GildedRose;
-import com.gildedrose.GildedRose22;
 import com.gildedrose.GildedRoseTest;
 import com.gildedrose.Item;
 
