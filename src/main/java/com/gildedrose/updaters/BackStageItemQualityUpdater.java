@@ -3,7 +3,7 @@ package com.gildedrose.updaters;
 import com.gildedrose.Item;
 import com.gildedrose.updaters.factory.QualityUpdater;
 
-public class BackStageQualityUpdater implements QualityUpdater {
+public class BackStageItemQualityUpdater implements QualityUpdater {
 
   @Override
   public void updateQuality(Item item) {

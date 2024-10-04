@@ -4,11 +4,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-import com.gildedrose.updaters.AgedBrieQualityUpdater;
-import com.gildedrose.updaters.BackStageQualityUpdater;
-import com.gildedrose.updaters.ConjuredItemsQualityUpdater;
-import com.gildedrose.updaters.NormalQualityUpdater;
-import com.gildedrose.updaters.SulfurasQualityUpdater;
+import com.gildedrose.updaters.AgedBrieItemQualityUpdater;
+import com.gildedrose.updaters.BackStageItemQualityUpdater;
+import com.gildedrose.updaters.ConjuredItemQualityUpdater;
+import com.gildedrose.updaters.NormalItemQualityUpdater;
+import com.gildedrose.updaters.SulfurasItemQualityUpdater;
 import com.gildedrose.updaters.factory.QualityUpdater;
 import com.gildedrose.updaters.factory.QualityUpdaterFactory;
 
@@ -32,7 +32,7 @@ public class GildedRoseTest {
         QualityUpdater qualityUpdater = QualityUpdaterFactory.getQualityUpdater(item);
 
         //THEN
-        assertEquals(qualityUpdater.getClass(), BackStageQualityUpdater.class);
+        assertEquals(qualityUpdater.getClass(), BackStageItemQualityUpdater.class);
     }
 
     @Test
@@ -45,7 +45,7 @@ public class GildedRoseTest {
         QualityUpdater qualityUpdater = QualityUpdaterFactory.getQualityUpdater(item);
 
         //THEN
-        assertEquals(qualityUpdater.getClass(), AgedBrieQualityUpdater.class);
+        assertEquals(qualityUpdater.getClass(), AgedBrieItemQualityUpdater.class);
     }
 
     @Test
@@ -58,7 +58,7 @@ public class GildedRoseTest {
         QualityUpdater qualityUpdater = QualityUpdaterFactory.getQualityUpdater(item);
 
         //THEN
-        assertEquals(qualityUpdater.getClass(), SulfurasQualityUpdater.class);
+        assertEquals(qualityUpdater.getClass(), SulfurasItemQualityUpdater.class);
     }
 
     @Test
@@ -71,7 +71,7 @@ public class GildedRoseTest {
         QualityUpdater qualityUpdater = QualityUpdaterFactory.getQualityUpdater(item);
 
         //THEN
-        assertEquals(qualityUpdater.getClass(), NormalQualityUpdater.class);
+        assertEquals(qualityUpdater.getClass(), NormalItemQualityUpdater.class);
     }
 
     @Test
@@ -84,6 +84,6 @@ public class GildedRoseTest {
         QualityUpdater qualityUpdater = QualityUpdaterFactory.getQualityUpdater(item);
 
         //THEN
-        assertEquals(qualityUpdater.getClass(), ConjuredItemsQualityUpdater.class);
+        assertEquals(qualityUpdater.getClass(), ConjuredItemQualityUpdater.class);
     }
 }

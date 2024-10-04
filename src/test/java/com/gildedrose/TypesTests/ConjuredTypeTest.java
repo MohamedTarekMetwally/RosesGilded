@@ -13,7 +13,7 @@ public class ConjuredTypeTest extends GildedRoseTest {
   @Test
   public void testConjuredItemQualityUpdated() {
     //GIVE
-    Item item = new Item("Conjured", -5, 20);
+    Item item = new Item(CONJURED, -5, 20);
     gildedRose = new GildedRose(new Item[]{item});
 
     //WHEN
@@ -27,7 +27,7 @@ public class ConjuredTypeTest extends GildedRoseTest {
   @Test
   public void testConjuredItemQualityStays() {
     //GIVE
-    Item item = new Item("Conjured", -5, -5);
+    Item item = new Item(CONJURED, -5, -5);
     gildedRose = new GildedRose(new Item[]{item});
 
     //WHEN
@@ -42,7 +42,7 @@ public class ConjuredTypeTest extends GildedRoseTest {
   @Test
   public void testConjuredItemQualityChanges() {
     //GIVE
-    Item item = new Item("Conjured", 5, 5);
+    Item item = new Item(CONJURED, 5, 5);
     gildedRose = new GildedRose(new Item[]{item});
 
     //WHEN

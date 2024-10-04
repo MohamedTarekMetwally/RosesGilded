@@ -13,7 +13,7 @@ public class AgedBrieTypeTest extends GildedRoseTest {
   @Test
   public void testAgedBrieQualityUpdate() {
     //GIVE
-    Item item = new Item("Aged Brie", 10, 20);
+    Item item = new Item(AGED_BRIE, 10, 20);
     gildedRose = new GildedRose(new Item[]{item});
 
     //WHEN
@@ -27,7 +27,7 @@ public class AgedBrieTypeTest extends GildedRoseTest {
   @Test
   public void testAgedBrieNegativeQualityUpdate() {
     //GIVE
-    Item item = new Item("Aged Brie", 10, -20);
+    Item item = new Item(AGED_BRIE, 10, -20);
     gildedRose = new GildedRose(new Item[]{item});
 
     //WHEN
@@ -41,7 +41,7 @@ public class AgedBrieTypeTest extends GildedRoseTest {
   @Test
   public void testAgedBrieUpdateBigQualityValue() {
     //GIVE
-    Item item = new Item("Aged Brie", 10, 100);
+    Item item = new Item(AGED_BRIE, 10, 100);
     gildedRose = new GildedRose(new Item[]{item});
 
     //WHEN
