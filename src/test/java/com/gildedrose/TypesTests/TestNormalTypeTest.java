@@ -1,6 +1,7 @@
 package com.gildedrose.TypesTests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -45,10 +46,24 @@ public class TestNormalTypeTest extends GildedRoseTest {
     gildedRose = new GildedRose(new Item[]{item});
 
     //WHEN
-    gildedRose.updateQuality();
+    assertThrows(IllegalStateException.class, () -> gildedRose.updateQuality());
 
     //THEN
-    assertEquals(item.quality, -20);
+    assertEquals(item.quality, 0);
+    assertEquals(item.sellIn, -6);
+  }
+
+  @Test
+  public void testNormalQualityBigQualityValue() {
+    //GIVEN
+    Item item = new Item(OTHERS, -5, 80);
+    gildedRose = new GildedRose(new Item[]{item});
+
+    //WHEN
+    assertThrows(IllegalStateException.class, () -> gildedRose.updateQuality());
+
+    //THEN
+    assertEquals(item.quality, 50);
     assertEquals(item.sellIn, -6);
   }
 }

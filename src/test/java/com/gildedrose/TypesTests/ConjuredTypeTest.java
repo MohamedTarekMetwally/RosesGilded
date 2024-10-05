@@ -1,6 +1,7 @@
 package com.gildedrose.TypesTests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -31,10 +32,10 @@ public class ConjuredTypeTest extends GildedRoseTest {
     gildedRose = new GildedRose(new Item[]{item});
 
     //WHEN
-    gildedRose.updateQuality();
+    assertThrows(IllegalStateException.class, () -> gildedRose.updateQuality());
 
     //THEN
-    assertEquals(item.quality, -5);
+    assertEquals(item.quality, 0);
     assertEquals(item.sellIn, -6);
   }
 
@@ -50,6 +51,20 @@ public class ConjuredTypeTest extends GildedRoseTest {
 
     //THEN
     assertEquals(item.quality, 3);
+    assertEquals(item.sellIn, 4);
+  }
+
+  @Test
+  public void testConjuredItemBigQualityChanges() {
+    //GIVE
+    Item item = new Item(CONJURED, 5, 60);
+    gildedRose = new GildedRose(new Item[]{item});
+
+    //WHEN
+    assertThrows(IllegalStateException.class, () -> gildedRose.updateQuality());
+
+    //THEN
+    assertEquals(item.quality, 50);
     assertEquals(item.sellIn, 4);
   }
 }

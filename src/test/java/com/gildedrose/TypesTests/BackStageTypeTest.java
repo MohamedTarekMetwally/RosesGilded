@@ -1,6 +1,7 @@
 package com.gildedrose.TypesTests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -31,7 +32,7 @@ public class BackStageTypeTest extends GildedRoseTest {
     gildedRose = new GildedRose(new Item[]{item});
 
     //WHEN
-    gildedRose.updateQuality();
+    assertThrows(IllegalStateException.class, () -> gildedRose.updateQuality());
 
     //THEN
     assertEquals(item.quality, 0);
@@ -45,10 +46,24 @@ public class BackStageTypeTest extends GildedRoseTest {
     gildedRose = new GildedRose(new Item[]{item});
 
     //WHEN
-    gildedRose.updateQuality();
+    assertThrows(IllegalStateException.class, () -> gildedRose.updateQuality());
 
     //THEN
-    assertEquals(item.quality, 100);
+    assertEquals(item.quality, 50);
+    assertEquals(item.sellIn, 4);
+  }
+
+  @Test
+  public void testBackStageNegativeQualityValue() {
+    //GIVEN
+    Item item = new Item(BACK_STAGE, 5, -5);
+    gildedRose = new GildedRose(new Item[]{item});
+
+    //WHEN
+    assertThrows(IllegalStateException.class, () -> gildedRose.updateQuality());
+
+    //THEN
+    assertEquals(item.quality, 0);
     assertEquals(item.sellIn, 4);
   }
 }

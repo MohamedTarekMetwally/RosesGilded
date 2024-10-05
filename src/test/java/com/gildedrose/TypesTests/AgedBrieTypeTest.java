@@ -1,6 +1,7 @@
 package com.gildedrose.TypesTests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -31,10 +32,10 @@ public class AgedBrieTypeTest extends GildedRoseTest {
     gildedRose = new GildedRose(new Item[]{item});
 
     //WHEN
-    gildedRose.updateQuality();
+    assertThrows(IllegalStateException.class, () -> gildedRose.updateQuality());
 
     //THEN
-    assertEquals(item.quality, -19);
+    assertEquals(item.quality, 0);
     assertEquals(item.sellIn, 9);
   }
 
@@ -45,10 +46,10 @@ public class AgedBrieTypeTest extends GildedRoseTest {
     gildedRose = new GildedRose(new Item[]{item});
 
     //WHEN
-    gildedRose.updateQuality();
+    assertThrows(IllegalStateException.class, () -> gildedRose.updateQuality());
 
     //THEN
-    assertEquals(item.quality, 100);
+    assertEquals(item.quality, 50);
     assertEquals(item.sellIn, 9);
   }
 
@@ -62,7 +63,7 @@ public class AgedBrieTypeTest extends GildedRoseTest {
     gildedRose.updateQuality();
 
     //THEN
-    assertEquals(item.sellIn, -6);
     assertEquals(item.quality, 22);
+    assertEquals(item.sellIn, -6);
   }
 }
